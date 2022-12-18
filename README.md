@@ -1,4 +1,4 @@
-# Node + EJS
+# Node & EJS
 
 Testing how EJS works with express in NodeJS.
 
