@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head'); %>
+    <body class="container">
+        <%- include('../partials/header'); %>
+        <main>
+            <div class="jumbotron bg-light p-4">
+                <h1 class="display-4">Node com EJS</h1>
+                <hr class="my-4" />
+                <p>Página HTML renderizada com Node e EJS</p>
+            </div>
+            <ul class="my-4 d-flex">
+                <% qualitys.forEach((item) => { %>
+                <div class="card m-2" style="width: 18rem">
+                    <img src="<%= item.url %>" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title"><%= item.title %></h5>
+                        <p class="card-text"><%= item.message %></p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <% }) %>
+            </ul>
+        </main>
+        <%- include('../partials/footer'); %>
+    </body>
+</html>
